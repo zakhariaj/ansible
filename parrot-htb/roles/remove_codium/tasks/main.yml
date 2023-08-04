@@ -1,0 +1,5 @@
+---
+- name: "Removing VS Codium"
+  ansible.builtin.apt:
+    name: codium
+    state: absent

@@ -1,0 +1,4 @@
+---
+# tasks file for configure_terminal
+- name: Set the shortcut for Terminal Ctrl+Alt+T
+  ansible.builtin.command: gsettings set org.mate.Marco.global-keybindings run-command-terminal '<Primary><Alt>t'

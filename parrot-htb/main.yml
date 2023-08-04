@@ -1,0 +1,15 @@
+---
+- name: "Customizing Parrot"
+  hosts: localhost
+  connection: local
+  roles:
+    - role: "roles/configure_terminal"
+    - role: "roles/customize-browser"
+    - role: "roles/remove_codium"
+    - role: "gantsign.visual-studio-code"
+      users:
+        - username: "{{ ansible_user_id }}"
+          visual_studio_code_extensions:
+            - ms-python.python
+            - streetsidesoftware.code-spell-checker
+
